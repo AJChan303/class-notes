@@ -1,0 +1,144 @@
+Java for C# Developers
+
+sean 5136007096
+Very similar Any Object oriented languages are gonna be similiar
+
+Key differences
+	visual studio vs ecplipse sts
+	eclipse has many flavors
+	Java has a lot more options
+
+	spring - standardized way to create controllers for the web
+
+	Frameworks .Net vs sdk (standard development kit)
+
+	.net 'solutions' vs Java 'project'
+
+	Syntax differences
+
+	C# syntax shortcuts
+
+	 properties in java have to be explicit in there get and set
+
+JDK, SDK 
+	Java 8 (JDK 1.8) minimum version
+
+	Java needs to be installed on that machine with the right verion
+
+	Source Files Class files
+
+	instead of .cs its a .java file
+
+	binary file means it contains machine data cannot be read as text
+	files are stored in a bin folder
+	source - text files to be made into binary files
+
+	JRE Jave runtime environment - what compiles and runs code
+
+	in Java the binary file is called . class
+
+IDE
+eclipse sts
+netbeans
+intelliJ
+
+==Perspectives==
+	Layout of ecllipse will change depending on what you are doing 
+
+Import
+	-general
+		-exsisiting project into workspace
+	Java used . notation to specify folders
+
+Inheritance : is extends in java
+import or using
+ctrl space is like tab tab in studio
+ex sysout ctrl space
+
+public class HelloWorldApp {
+
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		System.out.println("another line");
+		System.out.print("a");
+		System.out.print("a");
+		System.out.print("a");
+		System.out.print("a");
+
+		int a = 0;
+		String title = "hello world";
+
+	}
+
+}
+output
+Hello World
+another line
+aaaa
+
+cannot use the var type to make a variable
+
+
+
+Reference types are all capitalized and value types are lowercase
+
+for reference types using == will sometimes not work
+ 	there are methods that will see if things are equal
+
+==refactor==
+	can be used to turn lines of code into a method
+
+Exception catches some methods have the has in front to catch exceptions
+
+
+3-1, 3-2,
+4-1, 4-2, 4-4,
+5-1, 5-2, 5-3
+
+Classes in Java
+	UML unified modeling language
+	ORM object relational mapping
+	.net EF Java JPI
+
+	@ - signifies a "attribute" for java
+	@Entity
+	@ColumnName("....")
+	getters and setter must be pulbic and must be named very specificly
+	Class names Title case
+	instance varialbe are camelCase
+
+	getters and setter must starat with 'get' or 'set' plus instance variable name camelCased
+
+	package same as namespace
+	creating constructor rt. click source create constructor
+
+	line item combination of a product and a qty that u want
+
+	java called classes being inherited from super like base in c#
+
+	Ch08 good for inheritance : 
+
+	implementes for interfaces instead of colon
+
+	interfaces are the same as c# with the exception of default methods implemented in java 8
+
+	interfaces by convention are suffixed by -able and an i before the name
+
+	project 11-4 tic tac toe
+
+	foreach is for in is :
+
+	Making lists or arrays of value types need to be displayed as reference types int = Integers
+
+
+	File input/output
+
+	Advanced exception handling
+
+	jdbc - EF of Java
+
+	ORM / JPA
+
+	Restful with spring framework
+	
+

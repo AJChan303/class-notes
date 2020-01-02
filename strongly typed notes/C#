@@ -1,0 +1,273 @@
+C#
+One of the 2 main general purpose language other being java
+	Using -- points to a library name.. system is a library name system.dll
+	 	Class - Foundational Object 
+	 	Console - a class that opens console
+	 	WriteLine - Method(function)
+	 	Namespace - Everything in namespace has the designated name also attached to it
+	 	Main - Method to the class every program has a main method
+
+   -- Statements -- case sensitive.
+	abc Abc ABC all different
+	-Statement block
+	 Multiple statements surrounded by {}
+	All statements must end with a ;
+	'String n = FirstName' is a get
+	'Firstname = "Greg"' is a set
+---Contents of a class - Generally classes are made from nouns 
+	1) Properties (Variables) data it holds
+	2) Methods (Functions) Actions associated to the class
+	new - creates a new instance of a class
+	---Methods
+	 	-var - can specify variables as var to make the compiler assign a variable type
+	 	Constructor-ctor[tab][tab] a method with the same of the class name that works behind the scenes. Has no parameters which makes it default.
+	 		The Behind the scenes constructor gets replaced when one is written
+	 		-can initialize a class by using an anonymous constructor
+	 			- var [fred] = new [class] {[property] = ""}
+	 	static - variable exists as a single instance. Making new instances wont reset or change static variables
+	 		Static Methods can only access static properties.
+	 	void - doesnt return a value. The return statement is allowed but cannot have a parameter
+		
+	
+--- Process control statements
+		-ternary operator
+			var a =(b<c)?d:e;
+			means var a
+				if(b<c){
+				a=d;
+				}else{
+				a=e;
+				}
+		if(bool expression)
+			{statement | statement block}
+		
+        Better to use
+        and = &&
+        or = ||
+
+	        if (score >= 400
+	                && score <= 900) {
+	                this.CreditScore = score;
+	            }
+	            else {
+	                Console.WriteLine("Credit score must be between 400 and 900");
+	            }
+	        }
+ 
+    --Generic Collections 
+        -Array-
+	  			Type That holds a collection of integers displayd by []
+	  			ex. int[] name = new int[5];
+	  			numbers are assigned to each position in array first is 0
+	  			to access the item in the 3rd position;
+	  				int[2]
+
+	  	-- List -is a class thats a collection
+	  		List<[type]> [variable] = new List<[type]>();
+
+	  	--dictionary - is a class 
+	  		Dictionary<[key],[Data]>
+	  	ex - Dictionary<string,string> states = New Dictionary<string,string>();
+	  			States.Add("OH", "Ohio");
+	  			var statename = States["OH"]
+
+	  --switch([variable]){ //switch jumped right to the function that matches
+	  		[case]
+	  }
+	  	ex
+	  	switch(cust.State){
+	  		case"MT":
+
+	  		break;
+	  	}
+
+ --Looping
+ 	 --While
+			while(<Boolean>){
+			Most of the time the last statement of a while loop is incrementing the index
+		}	
+			index = index + 1 can also be written index += 1 or index++
+			Total = Total + array[index] or Total += array[idx];
+	 --While(i==10)
+	 == Is an equality check since i=10 would be a assignment
+	 	int a = 10
+	 		Type of values are declared first. int = integer
+
+	 --do{[body]}while([boolean expression])
+	 		Same as while loop but it checks the expression after the body
+	 
+	 --for([initialized block]; [test-block], [post-body-block];) {[body]}
+	 	-initialized-block represents code executed before the loop for any data needed for the loop
+	 	- test-block code that determines whether the body of the for() loop should be executed.
+	 		if the code does not evaluate to the boolean false, the body will execute again.
+	 	-post-body-block is code that executes each time after the body of the for() loop executes
+	 	ex.
+	 	int[] ints = {1,2,3}
+	 	for(int idx = 0; idx < ints.Length; idx++){
+	 		total += ints.Length;
+	 	}
+	 
+	 --foreach([int] [variable] in[collection]){body}
+	 	The simplest way to do the looping statement we've been talking about 
+	 	the variable in the foreach statement cannot be changed while the loop is going
+	 	foreach(int anInt in ints){
+	 	total += anInt
+	 }//this will sum all the integers in the ints array
+	 -foreach()  foreach([type] [variable] in collection) {[body]}
+	 	-each item in the collection will only be used once.
+	 --break- as soon as a loop hits break. loop stops
+	 --continue - "Search on this peice not needed, move to next"
+
+ 
+ --Keywords
+ 	new - create a new instance of a class
+		using System;
+
+		namespace MyFirstConsoleProject {
+		    class Program {
+		        static void Main(string[] args) {
+		            Console.WriteLine("Hello World!");
+		            int answer = Arithmetic.Add(3, 7);
+		            Console.WriteLine("3 + 7 = " + answer);
+		        }
+		    }
+		    class Arithmetic {
+		        public static int Add(int a, int b)
+		        {
+		            return a + b;  
+		        }
+		    }
+		}
+
+	% (modulus)
+	 a%b is remainder of a/b
+	+ -- concat
+ 	
+
+
+
+--Object Oriented Programming (OOP)--
+	-3 Tenets of OOP
+		1. Encapsulation (class)
+		2. Inheritance - create new object by using old ones and specifying what's different
+		3. Polymorphism - objects that can change into other things. poly - many. morphism - change.
+		4. Compositon (abstraction) - many believe it should replace inheritance- use exsisting object to create a new one
+				
+
+		1.Encapsulation -classes - the enclosing of properties and methods and setting them apart isolating them from the rest of the world.
+			- bringing together the variables and functions that operate on those variables into an object while protecting both from unauthorized access from outside the object.
+			-encapsulation is implemented in the class
+			-good compartmentalization of a class or classes' properties and methods
+	
+		2.Inheritance - public class [newclassname] : [inherited class name]{ }
+				- the concept of creating something new based on something that exsists by specifying the difference.
+				-this reduced the amount of code needed to be duplicated
+				-When one class inherits another all the variables and functions that are not private are included in the class even though the code is not there.
+				-in C# a class can only inherit form one other class
+	
+		3.Polymorphism -- allows  each class that inherits from a common base class to override the code in a common method.
+				-- a single class can draw upon 4 other classes set on a foreach statement for example.
+				-virutal and override - for inherited polymorphism classes- override is needed in classes inheriting the function. virtual in the Dad.
+				-calling the object method based on the right type at run time
+				-base.[funtion] base refers to parent class
+	
+		4. Composition (Abstraction)-- similar to inheritence in that a new object is created using the same code and specifying difference but it does this another way.
+			- a way to do this is the other classes can create a new instance of the first class so each class uses, so that that variable can use any of the functions of the first class
+			- using composition instead of inheritance is when a change is needed in a base or exsisting class that is used in many other classes
+			-you know in action movies where the hero uses a henchman to open a door locked behind a fingerprint scan. That's kinda like what compsition is
+			-Using another class to access its functions.
+			-using one class as a property in another class
+			-use a property from the dad class
+			-great way to make small changes in the child that would not ripple out from the parent
+
+--interface - declares how two object can communicate with each other.  one will promise to implement methods, one will promis to execute
+			-looks the same as if it was inherited
+			Most interface names start with 'I' as convention
+			interfaces have no properties, they contain method names they are calling to
+			-somewhat like a class without variables and methods there are method signatures without a body
+			-like classes they can be used as a type wherever a type is used
+			-used to add a consistency between what otherwise would be very different classes
+			- for multiple interfaces
+			public class <classname> : <inheritence (Optional)> , <Interface>,<Interface>{}
+
+
+--Abstract - When building a class library, some classes are created solely for supported other classes
+			- you wouldnt want to call on the class directly as its some functionality
+			- marking the class with abstract will generate an error when trying to generate an instance of that class
+			- if a class has even one abstract method the whole class will be considered abstract
+
+
+---Access Modifiers----
+	Allows to permit or restrict what other classes are allowed to do with your class
+	Default Access modifier for classes is Internal
+	Default Access modifier for Methods is Private
+			Static - Allows the method to be called upon static methods can only be called upon in static 
+			Public - accessible by any class
+			Protected - accessible by class inheriting this class
+			internal - accessible by classes in this project
+			private - accessible by the current class only
+			Protected internal - accessible by classes in this project and by classes 			inheriting this classes
+			Private Protected - accessible by the current class , classes inheriting this 		class in this project
+	
+	-- Value Types -- 
+			-Cast..  variables can be cast as another value type by placing the value type in ()
+			-enumeration- enum - define a set of values it is allowed to have.  can make it so strings point to numbers
+				ex. enum DaysoftheWeek {Monday, Tuesday, Wednesday...} //monday = 0 tuesday = 1 wednesday = 2...
+				  Now we can make DaysoftheWeek a type
+				  	DayoftheWeek Dow;
+				  	Dow = DayoftheWeek.Thursday;
+				ex. enum StudentStatus {Past, Current, Future};
+					public SetStatus(StudentStatus status) {
+					this.Status = status
+					} //method will only allow the enum defined strings
+					StudentStatus Status {get; set;}
+
+		object : is the base type for everything.		  		
+		byte: 0 to 255
+		sbyte: -128 to 128
+		uint: 0 to 4,294,967,295
+		int: -2,147,483,648 to 2,147,483,647
+		ulong: 0 to 18,446,744,073,709,551,615
+		long: -9,223,372,036,854,775,808  to 9,223,372,036,854,775,808
+		Float - floating points have a specific amount digits 7max
+		Double - 15 digits
+		decimal 28 significant digits
+		Bool - only valid values are true and false
+		--? - after the specified value allows the input to be null
+
+	--Reference Types
+		String - "Hello, World"
+		Char - holds one single character 'a'  
+
+			$ in front of a string mean interpolated. we dont want variables but values ex $"{a} + {b}" {} marks variables
+			Ex public static int Mod( int a, int b) {
+	            int ans = a % b;
+	            Console.WriteLine($"{a} mod {b} ={ans}");
+	            return ans;
+		
+		enum - type that creats a set of names that represent integers
+				
+
+		--Structs- way to define type of data tha can include different other types
+			They work a lot like classes have properties or methods
+			Properties are public by default
+
+
+			Ex. struct Customer {
+				string Name;
+				int ZipCode;
+			};
+			Customer c;
+			c.Name = "ACME.co"
+			c.ZipCode = 10010;
+			ex' This sets a default
+			 class Student {
+        
+       			 public bool IsPaid { get; set; } = false;
+   			 }
+
+   	--Exceptions - exceptions are classes. They are built in a hiearchy where Exception is the most default. All exceptions are built off this main one.
+   		Statement that is used to catch exceptions
+   		try{...}
+   		catch (Exception ex) {..}
+   		finally {...} //optional may close, end or cleanup processes that were interrupted by the exception

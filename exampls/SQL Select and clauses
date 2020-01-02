@@ -1,0 +1,77 @@
+SQL
+Structured Query Language
+not case sensitive most of the time
+(server)
+    Instances 1
+    Instances 2
+Server Name: Server\Instance
+go= all inserts work or none
+Rows and columns called result Set
+Terms:
+
+Select-reading data
+   * same order
+   * or | column list 
+from <tablename>
+where <clause> defines which rows
+        Boolean Expression-evaluates to true or false
+        Not(n) Not(T)=F Not(F)=T 
+        (n)And(h)=true only if both are true
+        (n)or(h)=False only if both are false
+
+        ex. Where Description = 'VP'
+            Where (Description = 'VP') or (Salary > 100000)
+    order by <Columnname>,...
+ (ex) Select * from Job;
+  (ex2) Select * from Job Order by <Columnname>,..;
+  Default setting is ascending add "desc" for ..
+count(*) counts all records
+sum(columnname) Adds all records
+Group By - takes all records by the same nature and treats them as one thing
+    Having 'columname' 
+    ex. 
+Select Description, Count(*) as 'Count', Format(sum(Salary), 'C') as 'Total Salary'
+    from Employee
+    join job
+    on JobID = Job.Id
+    Group By Description
+    Having sum(Salary) <= 250000
+    order by 'Total salary' desc
+Primary Key- value of a column or set of colums that together make each row unique
+Foriegn Key- column or columns in a table that contain the value of another tables primary key
+Programs actions on data or nouns
+tables are concrete data or things
+
+  (ex)
+  Select Firstname,Lastname, Description , Salary
+from Employee
+join job
+	on JobID = Job.Id
+	order by salary desc
+(ex)
+Select Concat(Lastname, ', ', Firstname) as 'Name', Description , Format(Salary, 'C') as 'Salary'
+from Employee
+join job
+	on JobID = Job.Id
+	order by name;
+
+Concat- bring together
+as- alias
+Avg(columnname)
+Subselect: Subselects need to have only 1 column of info
+can have multiple rows
+ex. 
+--Subselect
+--Finding avg salary
+--121346
+Select Firstname, lastname, description, Salary
+from Employee
+Join Job on job.ID = JobID
+Where salary > (
+				Select Avg(Salary) as 'salary'
+				from Employee
+				Join Job on job.ID = JobID)
+
+
+
+  

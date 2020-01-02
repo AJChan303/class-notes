@@ -1,0 +1,96 @@
+API - Applictation programming interface
+webservices return data the most popular is JSON or XML
+CLient is whoever made the request
+Stateless - never remembers - no context is typically stored between requests - server efficient
+Web API to replace asp.net and WCF
+		
+		Odata ex
+		http://myserver.com/bikes?$select=name,price&$filterprce gt 1000
+
+		SQL can use webservices to reach stored procedurea as http endpoints 
+
+XML extensible Markup Language
+	<?xml version ='1.0'?>
+	can support relational tables
+	and sql join relationships
+
+	XML is very wordy
+	Bing has a XML formatter
+
+	Visual studio has a paste special option to paste xml as classes
+
+JSON - Javascript object notation
+
+ex
+"{\"Name\":\"thingamajig\", \"ID\":\"A100\"}
+
+var thing 1 = {Name: "thingamajig", ID: "A100"};
+var thing 2 = JSON.parse('{"Name": "thingamajig" "ID":"A100"}')
+JSON BECAME ECMA standard in 2003
+
+[ { : , }] only structural tokens JSON uses everything else is data
+values - object array number string true false null
+object {string : value , string : value...}
+array [value, value, value...]
+/b bacpace
+\feed caracter 
+\n new line
+Properties are defined as name object pairs
+"PartNumber": "1234"
+numbers are simply listed as digits
+{"PartNumber": "1234", "id" : 1234}
+Object
+{
+	"Widget" :{
+	"Name": "thingamajig"
+	"Part": [
+	"PartNumber": "1234",
+	"PartNumber": "4567"
+	]
+
+	}e
+}
+For c# parsing JSON the recommendation is to use  Newtonsoft.Json
+
+dynamic objects in JSon is kinda like var in c# 
+
+serialize - when we send items accross the internet we send them in text taking object in c# and sending them accross the internet requires them to be serialized or stringified
+JSON and dates suck - they are counted as milisecond from a date in the 70s
+JSON Metadate  == data from where it came from or documentation
+
+
+Async = create a parales process to do this task 
+await = execute the code when the async is done
+
+
+    [ApiController] this attribute will make functions return JSON
+
+    Controllerbase = web api
+    Controller = mvc
+
+    Restfull - URL that points to a resource
+
+    https used to encrypt data uses a public key private key system
+    the user has the public key and the server has the private key
+    q
+
+Azure- 
+Vms 
+Web Apps 
+Functions
+Azure SQL 99% compatible with regular sql server
+Storage 
+	a netwrok disc drive
+	url based blob storage
+	Tod Gandy
+
+	Web APP vs function
+	functions should be used when very simple things need to be accomplished and not a full web app
+
+		Function is a class that has to have a function called 'Run'
+		azure functions is a serverless compute service 
+		responds to events and executes an action
+		Events are URL triggers  "Queue, timer, eventgrid,   "
+			they look a lot like a webapi request
+		a way to add new functionality to a website without rewriting code
+

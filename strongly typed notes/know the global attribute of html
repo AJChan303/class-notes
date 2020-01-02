@@ -1,0 +1,22 @@
+know the global attribute of html
+know which html statements required a closing tag
+know the css style to make text display in italics
+know how to make a table span the width of the page 
+width:100%
+
+know how to style to div tags so that  side by side
+float 
+or display:inline
+
+know the syntax of an anonymous javascript function
+function (){}
+know the core js data types
+number string object array boolean
+know the diffrences between == and ===
+know the syntax to iteration through a collection in Javascript
+for(var i=0; i collection.length; i++){
+	collection[i]....
+}
+
+know how to set or retrieve data in an <input> tag
+

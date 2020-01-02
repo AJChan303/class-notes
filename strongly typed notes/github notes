@@ -1,0 +1,88 @@
+lvl 1
+
+Deleting a github repo.... Delete the .git repo
+	in file explorer click view and check hidden items
+
+git help <any git command>
+git config --global user.name "Alex Chan"
+git config --global user.email FrozenChanana@gmail.com
+git config --global color.ui true
+*starting repo
+mkdir store
+cd store
+git init
+
+git status> tells what you changed since the last commit
+git add >adds to the stagin area
+git commit -m "what we did"
+	-m >message
+git add <file1> <file2>
+git add --all >adds all new or modified files
+git log >shows changes in the timline of the branch
+git add *.txt > adds all txt files in current directory
+git add "*.txt" >adds all txt files in all directories
+git add docs/*.txt
+git add docs/
+
+lvl 2
+
+git diff - Shows unstaged differences since last commit
+git reset Head <filename>- to unstage a file
+git checkout -- <filename> to revert changes back to last commit
+got commit -a -m "modify <filename>"
+			-a add changes from all tracked files
+git reset --soft Head^ - Reset into staging
+	reset into staging  and move commit before the head
+git add todo.txt
+git commit --amend -m "modify readme & add todo.txt" -add todo.txt to last commit
+git reset --hard HEAD^ -- undo last commit and all changes
+git reset --hard HEAD^^ undo the last 2 commit and all changes
+git remote add origin https://github.com/<restOfUrl>- to start repo from github
+		Don't do any of the "git reset..." "git commit --amend..."  after pushing
+git push -u origin master
+		origin- remote repository name.  master - local branch to push
+git pull - pull changes down from the remote
+git remote add <name> <address>
+git remote rm <name>
+git push -u <name> <branch>
+		-u -makes it so next time you "git push" you do not have to specify name and branch
+heroku create
+git remote -v
+git push heroku master
+	topush to heroku- heroku then deploys
+
+Lvl 3
+
+git clone <url> >will retrieve clone
+git clone <url> <local folder name>
+git remote -v > lists all remotes
+git branch <name> > makes another branch for a new feature
+git checkout <name>
+	switching to new branch
+echo "<text>" name.txt >makes txt file with <text> inside
+git add <name>.txt
+now if we git commit it will be added to the new branch
+ls >will list the files in our branch
+if we "git checkout master" then "ls" we will not see the committed files to the other branch
+git merge <name> >will merge the two branches
+git branch -d <name> >will delete the other branch we no longer 
+git checkout -b admin >creates new admin branch and then checks out branch
+*git uses Vim if no default editor is set to edit commit messages
+	j>down k>up ESC>leave mode :wq>save&quit h>left l>right i>insert mode :q!>cancel&quit :w > save
+cd <Path> Change Directory
+cd . > Same folder
+cd .. one up folder
+cd - > returns to previous working terminal
+cd / > your home directory
+Help pwd - get to the manual 
+Mkdir > Make new Directory
+Mkdir -p <path> > make folders thru a path
+Mv <target> < Destination> > Move file
+cp <target> <destination> > 1 move copy paste
+cp -R > Copy recursively (directories)
+rm <path> > Remove files and directories
+history > Show command history
+!! > recall previous command 
+!<linenumber> > repeat command in your history
+vim create and edit text files
+vim <path>

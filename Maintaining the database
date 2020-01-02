@@ -1,0 +1,19 @@
+Maintaining the database
+
+Insert
+	Ususally only insert for 1 row into 1 table
+	ex.
+	Insert into Job
+	(Salary, Description)
+	values (SalaryValue, 'Descriptionvalue');
+Update
+	Update Tablename Set
+		Colname = value, 
+		Colname = Value,...
+		Where <boolean-expression>
+
+Delete
+ex. 
+Delete from Tablename Where <condition>
+
+ex.  

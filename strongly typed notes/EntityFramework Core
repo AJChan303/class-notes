@@ -1,0 +1,42 @@
+EntityFramework Core
+an open source technology that provides an object-relational mapper(ORM) interface between c# and a database
+	1.Insulates the C# database code allowing easy migration between compatible databases
+	2. Allows the use of LINQ syntax for database access
+	EF can also allow the creation of a database in C# by mantaining the database dfinition based on the C# classes that map to database tables
+	this includes relationships between tables as well as contraints within particlar tables.
+--Models-
+	C# classes that provide the layout of SQL table. 
+	Models can map- one-to one with a table. it is also possible to have asingle modle map to more than one table.
+--Naming Conventions
+	-[key] used to mark the primary key properties.  Can tell the database to automatically generate these keys
+	-[required] tells the data base that this property is not nullables
+	-[StringLength] - strings are common forms of data c# does not limit the string size
+	-[Range(#, ###)] creates limits on valid values that can be entered.
+	-[Column(TypeName = "decimal(12,2)")]
+--Data Context- EntityFromwork Core can access a database that has hundreds of tables.  Data context can limit the tables it has access to.
+	- entry declares a variable of type DbSet<T> where T is the class name and the variable name is a plural name for the class because the variable will be a collection of instances of the class.
+--LINQ- using System.Linq;-
+	Language integrated query-
+	a series of extension methods
+	 set of technologies tat provides exte ded query and maintenance capability to c#
+--Lambda Syntax-
+ 	=> means such that
+--Extension Method-- 
+	Methods that can operate on anything that is a collection
+	  var students = context.Students.OrderByDescending(s => s.Lastname).ToArray();
+	   var students = context.Students
+                .Where(s => s.GPA >= 3)
+                .OrderByDescending(s => s.Lastname)
+                .ToArray(); // s is fred variable used much like the variable in foreach statement
+context-
+	var context = new AppDbContext();
+	var item = context.Items.ToFunction(); // Items points to the context page
+step 1 instance of the context
+step 2 property in database that represents the context
+step 3 methods to create sql statements
+
+install-package Microsoft.EntityFrameworkCore.SqlServer
+install-package Microsoft.EntityFrameworkCore.Proxies
+install-package microsoft.entityframeworkcore.tools
+add-migration "init // creates classes to match sql database
+update-database -verbose // affects changes to migration

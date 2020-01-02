@@ -1,0 +1,22 @@
+CSS
+style = ""
+
+key1:value1 ; key2: value2;...
+
+# similiar to . but for id
+
+can have more than one class style for an attribute
+class = "xyz abc"
+ 
+more specific modifiers override less specific attributes 
+	style in <p> most specific
+	class
+	P{} least
+
+in dev tools element.style= overrides everything else
+
+style sheets override so whatever comes last wins the race
+
+em = emphasis = em is size relative to all size by default
+			if default size is 16pt... 1 em = 16pt
+			2em would = 32pt.

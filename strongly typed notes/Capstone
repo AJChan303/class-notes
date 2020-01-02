@@ -1,0 +1,38 @@
+Capstone
+
+
+iF table has foriegn key dependancies then it cannot be made first.  
+make sure you hide the password
+Reviewer is the guy who is allowed to view all and manage requests
+isadmin is the one who can insert update and delete
+The Logged in user will be the user id for requests
+Most users are not admins or reviewers
+
+Creating prodicts you want to chose the vendor by the vendor name not the id
+using a drop down box
+
+when you update a product it will read the prodict on the screen.  it should select the vendor for tha product
+
+
+Request== Status and total are maintained by the application... MAKE THE STATUSES UPPERCASE
+
+request.total = THE Total of the request for all request lines
+
+need a method to pass in request id update the request and return the total
+
+for requests it should have a details and an edit button requests shld have a lines button
+
+ProductID in requests should have a drop down or list of some kind where they can pick a product
+
+When the request is made and submitted for review if it is less than 50$ it goes straight thru if over 50$ it goes to Review.. and a reviewer needs to approve it.  They have the option to approve or reject.  Status goes to approve..  if rejected.. text box come up and the user can see why
+
+
+Vendor PO - Goes to vendor looks at approved requests summarizes what we need from the vendors to complete our requests
+
+Request line page should show all requests lines with the same request id
+
+Will use postman to test our system
+
+Postman monitors THE JsON information
+
+create a dynamic search 

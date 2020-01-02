@@ -1,0 +1,13 @@
+POWERSHELL
+Powershell can be used to look at some .net framework classes and used to test .net framework methods
+add-Type -AssemblyName System.Speech
+verb-noun
+dlls or assemblys
+variables are declared with $
+Get-memeber
+members are properties and methods
+$speak = new-object system.speech.synthesis.speechsynthesizer
+$speak.Speak("Would you like to play a game?")
+$speak.GetInstalledVoices()
+$speak.GetInstalledVoices().VoiceInfo
+$speak.Speak("Would you like to play a game?")

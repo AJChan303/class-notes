@@ -1,0 +1,61 @@
+SQL 7/17
+Select * |(Distinct removes duplicate rows) Columnnames, ...
+From TableName
+Join Tablename
+On Col1 <>= Col2
+Where <Clause(boolean Expression)>
+	Where name in('values', 'values')
+Group by colname
+	Having (boolean Exp.) Works on a grouped data 
+Order by ColName(desc)
+
+
+
+Select Count(Colname) - count(Colname) From
+Distinct - results unique
+Null = no value
+Programmers hate him.
+"I'm null.. Null Null"
+corrupting databases everywhere.
+
+DML
+Data Manipulation Language
+data in tables
+
+DDL
+Data Definition Language
+Data outside tables
+Keywords:
+Create - insert
+Alter -update
+Drop - delete
+
+Creating tables and Dbs
+--CREATE DATABASE BootCampDb;
+Create Table Students (
+	Id int not null primary key identity(1, 1)
+	Firstname nvarchar(30) Not null,
+	Lastname nvarchar(50) Not null,
+	Email Nvarchar(255) null,
+	Phone Nvarchar(15),
+	DateEnrolled DateTime not null default getdate()
+		
+);
+
+Insert into students (Firstname, Lastname) Values ('Alex', 'Chan');
+Insert into students (Firstname, Lastname) Values ('Brailee', 'Begley');
+Insert into students (Firstname, Lastname) Values ('Briana', 'Presley');
+Insert into students (Firstname, Lastname) Values ('Glenn', 'Lindmark');
+Insert into students (Firstname, Lastname) Values ('Jesse', 'Kyle');
+Insert into students (Firstname, Lastname) Values ('Maggie', 'Schutzman');
+Insert into students (Firstname, Lastname) Values ('Titus', 'Moore');
+Insert into students (Firstname, Lastname) Values ('Marianne', 'Linardos');
+Insert into students (Firstname, Lastname) Values ('Greg', 'Doud');
+
+Column Definition-
+	Name 
+	Type (Nvarchar, int , bit = boolean(0, 1), DateTime('2019-07-19 10:03:21')) Nvarchar can contain (Max)
+	Name &Type required for every table
+	Nullable - not null (Defaut = yes)
+
+/* anything inside is comment */

@@ -1,0 +1,67 @@
+testing / Writing a good program
+Capstone
+	make hidden links that appear depending on admin or not
+
+
+
+1.Make it functional
+2.Make it Elegant
+	a.fast
+	b.extensible
+	c.code modifyable 
+
+	ctrl j forces intelisense
+	
+
+	shift alt arrow keys 
+	ctrl alt click
+	multiple cursors
+
+ctrl h - mass replace
+
+	alt arrow keys moves lines
+
+	Web --> Server --> Data
+
+	Created new database 
+	"May cause multiple cascade paths
+	On Delete no action"
+	does this mean it will delete multiple data off multiple tables 
+
+	I went in and deleted the OnDelete something cascade in the migration: repercussions?
+
+	--Testing--
+	Want to test enough to know it works
+	
+	frequent testing recommended before things get too complicated
+	-21>x or x>17
+-50
+-22
+-21
+-20
+-5
+-1
+0
+1
+5
+16
+17
+18
+50
+Nunit test project .netcore
+[Test] anotation/attribute to show what tests to execute by test manager
+[Setup] what testmanager does before it calls test methods
+grouping tests with like results together can have more than 1 assert in a function
+Debug.Assert(i>=0);
+Assert.
+
+Create team repository and add collaborators
+1 coder
+1 tester
+
+console app
+library
+test project MS TEST
+
+
+Architect is meeting with business analust who then informs the proj lead who usually gives the framwork to the team

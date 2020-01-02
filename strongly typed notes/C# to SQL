@@ -1,0 +1,88 @@
+C# to SQL
+
+using System.Data.SqlClient;
+	Sql server management studio talks to sql server.  we need to make our C# code do the same thing, establish a connection
+	connections are expensive resource wise.
+	companies may limit how many of these connection can occur atatime
+var connStr = @"server=localhost\sqlexpress;database=CustomerOrderDb;trusted_connection=true;"; // connection statement
+	-trusted_connection=true // windows authentication part
+var connection = new SqlConnection(connectionstring); // creates a new sqlconnection
+connection.Open();
+	if(connection.State != System.Data.ConnectionState.Open) {
+                throw new Exception("connection did not open!");
+            }// double checking we have an open connection
+             var sql = "Select * from Customers;";
+            var cmd = new SqlCommand(sql, connection);
+
+            connection.Close();// should always close connections when finished
+      -SqlParameter()  better practice than concatinating.
+     -SqlConnection(connectionstring); // creation of the connection
+    -SqlCommand()- used in c# to pass in a Sql statement
+    	var cmd = new SqlCommand([sqlstatement], [connection]);
+    -bool Read()- moves pointer looking at columns
+    -ExecuteReader(); / method to return rows of data
+	connection needs to know about
+		server\instance
+			-localhost - generic name for machine your on
+			- \\ in C# \ has other syntax using 2 means \
+			-@ before a string- treat every character inside a string as part of a string
+		database
+		authentication
+			-windows
+			-SQL server authentication
+				- username password and grants certain privledges
+		-ternary operator
+			var a =(b<c)?d:e;
+			means var a
+				if(b<c){
+				a=d;
+				}else{
+				a=e;
+				}
+
+	EXAMPLE
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+
+namespace CSharp2Sql {
+    class Program {
+        static void Main(string[] args) {
+            var sql = "Select * from Customers where State = 'OH';";
+            var customers = SelectCustomer(sql);
+            foreach (var customer in customers) {
+                Console.WriteLine(customer.Name);
+
+            }
+        }
+        static List<Customer> SelectCustomer(string sql) { 
+            var connStr = @"server=localhost\sqlexpress;database=CustomerOrderDb;trusted_connection=true;";
+           var connection = new SqlConnection(connStr);
+            connection.Open();
+            if(connection.State != System.Data.ConnectionState.Open) {
+                throw new Exception("connection did not open!");
+            }
+            var customerList = new List<Customer>();
+            
+            var cmd = new SqlCommand(sql, connection);
+            var reader =  cmd.ExecuteReader();
+            while (reader.Read()) {
+                var id = (int)reader["Id"];
+                var name = reader["Name"].ToString();
+                var city = reader["City"].ToString();
+                var state = reader["State"].ToString();
+                var active = (bool)reader["Active"];
+                var code = reader.IsDBNull(reader.GetOrdinal("Code"))? null:reader["Code"].ToString();
+
+                var customer = new Customer(id, name, city, state, active, code);
+                customerList.Add(customer);
+
+               
+            }
+            
+            reader.Close();
+            connection.Close();
+            return customerList;
+        }
+    }
+}

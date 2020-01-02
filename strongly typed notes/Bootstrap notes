@@ -1,0 +1,99 @@
+Bootstrap notes
+Div classes
+	Container
+	Container-fluid
+	footer
+	col-md-# > number of columns to take up 12 max 992+
+	col-md-offset-1 added to the above class will add a column of padding
+	row > to section up the different columns making it easier to read
+	col-sm-# > number of columbs to take up.  if md was medium sm is small 768=
+	col-xs-# > for xs phone veiwing 0px+
+ex. <div class= col-md-4 col-xs-10 col-xs-offset-1 col-sm-offset-0>
+	hidden-sm
+	hidden-xs > Would hide containing info in sm or xs browsers
+	visible-md or visible-lg >specify sizes to show items
+	lead > make text slightly bigger and stands out
+	text-center
+	well >gives a nice inset effect
+	well-lg >Increase padding
+	well-sm >decrease padding
+Bootstrap comes with 200 icons to use named glyphicons
+ex. <i class='glyphicon glyphicon-briefcase'></i>
+<i class='glyphicon glyphicon-send'></i>
+If we want to make customizations to the bootstrap css we should instead add them in Main.css file
+If we add a features class to the row
+ex <div class='row features'>
+Then in our css file we can modify glyphicons in that class
+ex. 
+.features .glyphicon {
+	font-size:32px,	
+	color: ######,
+}
+removing bulletpoints from ul
+<ul class='list-unstyled'>
+can also use .list-inline >to show horizontally
+
+Buttons
+<button type='button'>Take the Tour</button>
+ going to add <button type='button' class='btn btn-lg btn-default'>Take the Tour</button>
+ .btn-primary
+ .btn-success
+ .btn-info
+ .btn-danger
+ .btn-warning
+
+ Making our H1 into a clickable link to home
+<div class='navbar navbar-default navbar-static-top'>
+ 	<div class='container'>
+ 		<a href='/' class='navbar-brand'>
+ 			Main Title
+ 		</a>
+			<ul class='nav navbar-nav navbar-right'>...</ul>
+ 	</div>
+ </div>
+.nav modifiers
+	.nav-pills >horizantal w rounded borders
+	.nav-tabs
+.navbar modifiers
+	.navbar-nav horizantal
+	.navbar-right >right jsutify
+	.navbar-default adds the nice colors
+	.navbar-inverse darkers color schemes
+	.navbar-static-top
+	.navbar-fixed-top >follows scroll
+	.navbar-fixed bottom
+
+Hiding our nav bar in a collapsed view model for only xs
+	.collapse 
+<div class='navbar navbar-default navbar-static-top'>
+	<div class='container'>
+	 <div class='navbar-header'>
+	 <a href='index.html' class='navbar-brand'>...</a>
+	  <button type='button'class='navbar-toggle' data-toggle='collapse' data-toggle='.navbar-collapse'>
+	   <span class='sr-only'Toggle Navigation</span>
+	   <span class='icon-bar'></span>
+	   <span class='icon-bar'></span>
+	   <span class='icon-bar'></span>
+	 </button>
+	</div>
+	 <ul class='nav navbar-nav navbar-right collapse navbar-collapse'>..</ul>
+	</div>
+</div>
+sr-only > Screen readers only
+
+
+
+dropdown menus
+.dropdown-menu  -  This lets bootstrap know this is a dropdown and wont load
+<li>
+ <a href='about.html' data-target='#' data-toggle='dropdown'>About <Span class='caret'></span></a>
+  <ul class='dropdown-menu'>
+   <li><a href='story.html'>Our Story</a></li>
+   <li><a href='contact.html'>Contact us</a></li>
+   <li class='divider'></li>
+   <li><a href=/blog'>Blog</a></li>
+   <li class='divider'></li>
+   <li><a href='http://twitter.com/...'>Twitter</a></li>
+   <li><a href='http://facebook.com/...'>Facebook</a></li>
+  </ul>
+ </li>

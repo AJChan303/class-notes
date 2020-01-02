@@ -1,0 +1,51 @@
+Scrum
+
+
+5 Events
+Prescribed events are used in Scrum to create regularity and to minimize the need for meetings
+not defined in Scrum. All events are time-boxed events, such that every event has a maximum
+duration. Once a Sprint begins, its duration is fixed and cannot be shortened or lengthened. The
+remaining events may end whenever the purpose of the event is achieved, ensuring an
+appropriate amount of time is spent without allowing waste in the process.
+Other than the Sprint itself, which is a container for all other events, each event in Scrum is a
+formal opportunity to inspect and adapt something
+1 Sprint
+		Each Sprint may be considered a project with no more than a one-month horizon. Like projects,
+		Sprints are used to accomplish something. Each Sprint has a goal of what is to be built, a design
+		and flexible plan that will guide building it, the work, and the resultant product increment.
+		Sprints are limited to one calendar month. When a Sprint’s horizon is too long the definition of
+		what is being built may change, complexity may rise, and risk may increase. Sprints enable
+		predictability by ensuring inspection and adaptation of progress toward a Sprint Goal at leastnb
+		every calendar month. Sprints also limit risk to one calendar month of cost.
+2 Sprint Planning
+			The work to be performed in the Sprint is planned at the Sprint Planning. This plan is created by
+		the collaborative work of the entire Scrum Team.
+		Sprint Planning is time-boxed to a maximum of eight hours for a one-month Sprint. For shorter
+		Sprints, the event is usually shorter. The Scrum Master ensures that the event takes place and
+		that attendants understand its purpose. The Scrum Master teaches the Scrum Team to keep it
+		within the time-box.
+		Sprint Planning answers the following:
+		• What can be delivered in the Increment resulting from the upcoming Sprint?
+		• How will the work needed to deliver the Increment be achieved?
+3 Daily Scrum
+			The Daily Scrum is a 15-minute time-boxed event for the Development Team. The Daily Scrum is
+		held every day of the Sprint. At it, the Development Team plans work for the next 24 hours. This
+		optimizes team collaboration and performance by inspecting the work since the last Daily Scrum
+		and forecasting upcoming Sprint work. The Daily Scrum is held at the same time and place each
+		day to reduce complexity.
+
+4. Sprint Review
+		A Sprint Review is held at the end of the Sprint to inspect the Increment and adapt the Product
+		Backlog if needed. During the Sprint Review, the Scrum Team and stakeholders collaborate
+		about what was done in the Sprint. Based on that and any changes to the Product Backlog
+		during the Sprint, attendees collaborate on the next things that could be done to optimize value.
+		This is an informal meeting, not a status meeting, and the presentation of the Increment is
+		intended to elicit feedback and foster collaboration.
+
+5. Sprint Retrospective 	
+		The Sprint Retrospective is an opportunity for the Scrum Team to inspect itself and create a plan
+		for improvements to be enacted during the next Sprint.
+		The Sprint Retrospective occurs after the Sprint Review and prior to the next Sprint Planning.
+		This is at most a three-hour meeting for one-month Sprints. For shorter Sprints, the event is
+		usually shorter. The Scrum Master ensures that the event takes place and that attendants
+		understand its purpose. 

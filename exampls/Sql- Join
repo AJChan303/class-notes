@@ -1,0 +1,23 @@
+Sql- Join
+
+Join or Inner Join
+Tables joined need to have a match of no results
+ ex. Select E.Lastname, E.Firstname, J.Description, J.Salary
+From Job J
+left Join Employee E
+on Jobid = J.id
+Where description = 'Asst. Supervisor'
+Order by Description
+
+Join -Union
+ 
+
+ Variables
+ Declare @name nvarchar()/int;
+ Set @name = '';
+or
+Declare @name nvarchar()/int = ''
+
+Where Like clause
+ %= 0 or more characters
+ _:exactly 1 character

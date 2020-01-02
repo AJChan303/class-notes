@@ -1,0 +1,123 @@
+Capstone
+
+
+iF table has foriegn key dependancies then it cannot be made first.  
+make sure you hide the password
+Reviewer is the guy who is allowed to view all and manage requests
+isadmin is the one who can insert update and delete
+The Logged in user will be the user id for requests
+Most users are not admins or reviewers
+
+Creating prodicts you want to chose the vendor by the vendor name not the id
+using a drop down box
+
+when you update a product it will read the prodict on the screen.  it should select the vendor for tha product
+
+
+Request== Status and total are maintained by the application... MAKE THE STATUSES UPPERCASE
+
+request.total = THE Total of the request for all request lines
+
+need a method to pass in request id update the request and return the total
+
+for requests it should have a details and an edit button requests shld have a lines button
+
+ProductID in requests should have a drop down or list of some kind where they can pick a product
+
+When the request is made and submitted for review if it is less than 50$ it goes straight thru if over 50$ it goes to Review.. and a reviewer needs to approve it.  They have the option to approve or reject.  Status goes to approve..  if rejected.. text box come up and the user can see why
+
+
+Vendor PO - Goes to vendor looks at approved requests summarizes what we need from the vendors to complete our requests
+
+Request line page should show all requests lines with the same request id
+
+Will use postman to test our system
+
+Postman monitors THE JsON information
+
+create a dynamic search 
+
+
+
+Find a way to snapshot the price on the purchase date to RequestLines so that you have the price on that day
+
+Additional web api changes...
+# PRS Api Requirement
+Each of the tables in PRS (User, Vendor, Product, Request, RequestLine) will be generated with EntityFramework support. This will create the five basic apis automatically:
+1. List all
+2. Get by PK
+3. Insert
+4. Update
+5. Delete
+There are additional apis required that must be coded by students
+## User
+### Authenticate or Login
+This api requires passing in the username and password then searching for a user with those credentials. If found, the user instance is returned; otherwise null is returned
+## Vendor
+No additional apis required
+## Product
+No addtional apis required
+## Request
+### SetStatusReview(int RequestId)
+This api simply sets the status of the request to REVIEW.
+### SetStatusApproved(int RequestId)
+This api simply sets the status of the request to APPROVED.
+### SetStatusRejected(int RequestId)
+This api simply sets the status of the request to REJECTED.
+### GetRequestsForReview
+This api retrieves all the requests where status is REVIEW except those of the logged in user (users cannot review their own request)
+## RequestLine
+### RecalcRequestTotal(int RequestId)
+This api recalculates the total for the request by iterating through the request lines, multiplying the quantity times the price, then summing up and updating the request with the total. This is called every time a request line is added, updated, or deleted. 
+
+
+
+
+ANYTHING OUTSIDE THE NORMAL CRUD FUNCTIONS WILL NEED A NEW WEB API
+			EX LOGIN STATUS
+
+
+Things left to do // Work from bottom up!!!!!!!!!!!!
+
+	have some fun with RegEx/masks
+
+	Style Clean up all that dirty HTML
+		Maybe just some simple consistent bootstrap styling
+	
+	Beef up login to consider ifAdmin ifReviewer
+
+	Modal
+
+	location.reload() // find alternative to this.. very clunky
+	Make Review filter out logged in user
+
+	Photos and photopath should be easy
+
+	REquestLines .html  should have an area If requestlines for rid = null prompt user
+
+	(uncessesary) Might have a problem deleting products tiedto Requests
+
+	Requests that are submitted should not be able to be edited!!!!
+
+	 done Auto Approve Request submitted under 50$
+
+	The premade buttons are pretty bad
+		images could use an overhaul
+		Reject button only works if clicked on left.
+			Maybe add ngIf rejection reason null hide button
+
+	display rejection reason if there is one hide it if not
+	Cleanup code to run faster 
+		ie I think I save to dbcontext redundantly (Recalctotalfunction)
+		Maybe after a request is approved the recalculate doesn't touch it anymore
+
+		some of my component.ts files are very bloated
+
+		DATA CLEANUP
+
+		done DATA TESTING LoGS
+
+
+			My Request approve and reject are not loading all the time or take a while to display correctly
+			Sometimes my buttons jst navigate and not execute the event
+

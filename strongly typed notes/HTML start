@@ -1,0 +1,96 @@
+HTML/CSS/JS/JQuery
+Domain names are unique and linked to an ip address
+Domain Name Servers (DNS)
+cmd.exe
+Tracert [website] to see its process in finding servers
+
+shift alt f - formats parent child relationships
+
+cycle - the request from a machine to the server and the response back to the machine
+stateless - every request is like the first request you ever made
+ ctrl / makes comments
+ in git start index.html
+
+http://example.com/magic-cake.html
+http:// - protocal
+example.com - server
+magic-cake.html - path to file
+
+ <!doctype = html> //sets html version if non its default is the latest version
+ <html>
+ 	<head>
+ 		<title> Browser tab </title>
+ 	</head>
+ 	<body>
+ 		<h#>
+ 			<p>...</p>
+ 			<ul>
+ 				<li></li>
+ 				<li></li>
+ 			<ol>
+ 				<li></li>
+ 				<li></li>
+ 		</h#>
+ 	</body>
+ </html>
+
+	<html> - file grandfather tag
+	<head> any code that needs to be run before the body is displayed
+	<title> browser tab name
+	<body> what the user sees
+	<h1> Header 1 thru <h6> has scaling style and meant to be a header or "title"
+	<p> non styling tag for paragraph text
+	<ul> unordered list - bullet entries
+	<ol> ordered list
+	<li> list item for the un/ordered list
+	<pre> // not formatted tells progammer its code 
+		public Customer(){
+			//constructor code here
+		}
+	</pre>
+	<form> group items you want users to interact with but may be used on another page
+	form 1 might be a sign up sheet
+	form 2 might add the data to a database
+	<form> attributes
+		method ="Get"
+		method = "POST"
+		action = "pagejumpingto.html"
+	<input type = "type of input" name = "of field" value = "123">
+	what url looks like--file:///C:/repos/First-html/index3.html?aaa=12345&bbb=7890 
+	bad if its sensitive data
+	<table> creates a table with rows and columns
+		<tr> table row
+			<td> table columns
+	<div> block level used typically to enclose other tags
+	<a> anchor tag used to make clickable link
+		any text inside will apear as a clickable link
+	ex. <a href = "http://example.com/magic-cake.html"> magic cake </a>
+		can add target = "_blank" open page in a new window/tab
+				target = "_self" open page in the same window/tab
+	-Relative Path-	if href only contains the html file the browser to look in the same server or =Relative path=
+	-Absolute path- must be inserted if the link is pointing to another server.
+
+==Block or Inline==
+Block - take the full horizantal width
+	-ex block tags  <h1> <p>
+Inline - does not take the full horizantal width and inline tags next to eachother will be concatonated together
+	-ex inline tags <span>
+
+	<span>abc</span>
+	<span>def</span>
+	would look like : abcdef
+	<p>abc</p>
+	<p>abc</p>
+	would look like :
+	abc
+	def
+
+==Attributes==
+class
+nav
+hidden
+href
+type
+name
+value
+

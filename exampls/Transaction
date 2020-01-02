@@ -1,0 +1,79 @@
+Transaction
+one or more statements ususally update statements to do one 
+or more statements that you want either all to work or none to work.
+Begin Transaction
+<Maintenance work on tables>
+Rollback
+or
+Commit
+
+
+Procedure
+Create Procedure
+AS
+Begin
+	<Command You want done>
+End
+
+
+Ex Creating a procedure to google search the tables joined 
+Create Procedure EJListSearch
+	@search nvarchar(30)
+as
+Begin
+	Set @Search =Concat('%', @search, '%');
+	Select Concat(Lastname, ', ', Firstname) 'Name', Description 'Job', Format(Salary, 'c') Salary
+	From Employee
+	join Job
+	on Jobid = Job.id
+	Where Lastname Like @search or Firstname Like @search or Job.Description like @search
+	Order by Lastname; 
+End
+
+Ex Procedure looking at LT or GT salaries
+
+Create Procedure SalaryLTGT @lowsalary int, @highsalary int
+As
+Begin
+	
+	Select Concat(E.Lastname, ', ', E.Firstname) Name, Description, Format(Salary, 'c') Salary
+	from employee e
+	join job j
+	on e.jobid = j.id
+	Where Salary >= @lowsalary and salary <= @highsalary
+	Order by name;
+End
+go
+exec SalaryLTGT 100000, 130000;
+go
+
+
+ex. Procedure to insert employee
+
+Create Procedure [dbo].[InsEmployee]
+	@Firstname nvarchar(30), @Lastname nvarchar(30), @Job nvarchar(30)
+as
+Begin
+	Declare @JobID int;
+	
+	Select @jobid = id from job where description = @Job;
+
+	Insert into employee
+	(Firstname, Lastname, Jobid)
+	Values (@Firstname, @Lastname, @Jobid)
+end
+Go
+Exec InsEmployee @firstname ='Peter', @Lastname = 'Parker', @job = 'Director'
+
+IF <Boolean Expression> Then
+"If TRUE Then"
+Begin
+End
+"If FALSE Then"
+Begin
+End
+
+While <Boolean Expression>
+True
+Begin
+end <REPEATING>
